@@ -557,6 +557,8 @@ export async function seedIfEmpty(
   defaultTeams?: Team[],
   defaultMatches?: Match[]
 ) {
+  // Matikan seeding lokal
+  return;
   try {
     const existingTeams = await db.select().from(teams).limit(1);
     if (existingTeams.length === 0) {
